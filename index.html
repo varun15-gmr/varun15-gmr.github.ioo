@@ -1,0 +1,57 @@
+</script>
+/* QUESTION 1 */
+function q1badiyaa() {
+  showReply("Glad to hear that 😊🫶🏻");
+  nextQ2();
+}
+
+function q1thik() {
+  showReply("Hope your day gets even better 😀🌸");
+  nextQ2();
+}
+
+/* QUESTION 2 */
+function nextQ2() {
+  document.getElementById("question").innerText =
+    "2. Can I wish you a happy Valentine’s Day? 🌸";
+
+  document.getElementById("buttons").innerHTML =
+    '<button onclick="q2yes()">yess</button>' +
+    '<button onclick="q2yes()">ofcc yess 💗</button>';
+}
+
+function q2yes() {
+  showReply("Happy Valentine’s Day to you 💝✨");
+  nextQ3();
+}
+
+/* QUESTION 3 */
+function nextQ3() {
+  document.getElementById("question").innerText =
+    "3. Do you like cute surprises? 🎁";
+
+  document.getElementById("buttons").innerHTML =
+    '<button onclick="finalYes()">yess 💝</button>' +
+    '<button onclick="finalNo()">nope</button>';
+}
+
+/* FINAL RESPONSES */
+function finalYes() {
+  document.getElementById("question").innerText =
+    "That made me smile 😊";
+  document.getElementById("buttons").innerHTML = "";
+  showReply("Thanks for answering 🫶🏻✨");
+}
+
+function finalNo() {
+  document.getElementById("question").innerText =
+    "No worries at all 😊";
+  document.getElementById("buttons").innerHTML = "";
+  showReply("Still wishing you a lovely day 🌸");
+}
+
+/* HELPER */
+function showReply(text) {
+  document.getElementById("reply").innerText = text;
+}
+</script>
